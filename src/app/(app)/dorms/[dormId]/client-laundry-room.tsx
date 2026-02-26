@@ -82,7 +82,7 @@ export default function ClientLaundryRoom({
       </Link>
       <div className="flex flex-wrap gap-4">
         {(machines ?? [])
-          .sort((a, b) => (a.type > b.type ? 1 : -1))
+          .sort((a, b) => (a.type > b.type ? -1 : 1))
           .map((machine) => {
             return (
               <Card key={machine.identifier} className="w-80">
